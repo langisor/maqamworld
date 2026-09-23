@@ -8,10 +8,10 @@ This documentation provides a comprehensive introduction to Arabic music theory,
 
 ### Level 1: Foundation
 
-- Module 1: The Foundations of the Arabic Sound System
-- Module 2: The Building Blocks — Ajnas
-- Module 3: Constructing Full Scales (Maqamat)
-- Module 4: The Art of Melodic Movement (Sayr and Modulation)
+- [Module 1: The Foundations of the Arabic Sound System](#module-1-the-foundations-of-the-arabic-sound-system)
+- [Module 2: The Building Blocks — Ajnas](#module-2-the-building-blocks--ajnas-singular-jins)
+- [Module 3: Constructing Full Scales (Maqamat)](#module-3-constructing-full-scales-maqamat)
+- [Module 4: The Art of Melodic Movement (Sayr and Modulation)](#module-4-the-art-of-melodic-movement-sayr-and-modulation)
 
 [Start Level 1 →](/en/level-1.md)
 
