@@ -7,6 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
+  <style>
+    .maqam-score {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border: 1px solid var(--border-color, #e0e0e0);
+      border-radius: 6px;
+      
+    }
+    .maqam-score:empty::before {
+      content: 'Loading score…';
+      color: #700808;
+      font-size: 0.85em;
+    }
+  </style>
 </head>
 <body>
 
@@ -40,12 +54,36 @@
         crossChapter: true,
         crossChapterText: true,
       },
-      
 
+      // Renders any <div class="maqam-score" data-src="..."></div> found on
+      // the current page after docsify injects it into the DOM. Runs on
+      // every page navigation (level-1.md, level-2.md, appendix, etc.),
+      // so a page only needs the <div> marker - no per-page <script> needed
+      // (script tags inside markdown content are not executed by docsify).
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            document.querySelectorAll('.maqam-score:not([data-rendered])').forEach(function (el) {
+              var src = el.getAttribute('data-src');
+              if (!src) return;
+              el.setAttribute('data-rendered', 'true'); // avoid double-render on repeat visits
+              var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay(el, {
+                autoResize: true,
+                drawTitle: true
+              });
+              osmd.load(src).then(function () {
+                osmd.render();
+              }).catch(function (err) {
+                el.textContent = 'Could not load ' + src + ': ' + err;
+              });
+            });
+          });
+        }
+      ],
 
     }
   </script>
-<!-- OSMD - render Musicxml files -->
+<!-- OSMD - render Musicxml files (must load before docsify core, below) -->
 <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.6/build/opensheetmusicdisplay.min.js"></script>
   <!-- Docsify core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
