@@ -15,9 +15,15 @@ This documentation provides a comprehensive introduction to Arabic music theory,
 
 [Start Level 1 →](/en/level-1.md)
 
-### Level 2: Coming Soon
 
-Advanced concepts and techniques.
+### Level 2: Advanced Scales (Maqamat) - Tetrachord and Pentachord
+
+- Module 1: 
+- Module 2: 
+- Module 3: 
+- Module 4: 
+
+[Start Level 2 →](/en/level-2.md)
 
 ### Level 3: Coming Soon
 
