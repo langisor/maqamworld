@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Maqam World - Arabic Music Theory Guide</title>
@@ -9,12 +10,15 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
   <style>
     .maqam-score {
-      margin: 1rem 0;
-      padding: 0.5rem;
+      width: 100%;
+      margin: 1rem auto;
+      padding: 0.2rem;
+      box-sizing: border-box;
       border: 1px solid var(--border-color, #e0e0e0);
       border-radius: 6px;
-      
+
     }
+
     .maqam-score:empty::before {
       content: 'Loading score…';
       color: #700808;
@@ -22,6 +26,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div id="app"></div>
@@ -69,8 +74,21 @@
               el.setAttribute('data-rendered', 'true'); // avoid double-render on repeat visits
               var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay(el, {
                 autoResize: true,
-                drawTitle: true
+
+                drawTitle: true,
+                defaultColorLabel: '#0000ff',
+                defaultColorReset: '#e0382b',
+
+
+
               });
+              osmd.EngravingRules.DefaultFontFamily = "Georgia, 'Times New Roman', serif";
+
+              osmd.EngravingRules.autoHeader=true;
+              osmd.EngravingRules.SheetTitleHeight = 3.0;        // slightly larger than default
+              osmd.EngravingRules.TitleTopDistance = 2.0;        // tighter gap above the staff
+
+              osmd.EngravingRules.DefaultColorTitle = "#7a1f2b"; // maroon, doesn't touch note color
               osmd.load(src).then(function () {
                 osmd.render();
               }).catch(function (err) {
@@ -83,8 +101,8 @@
 
     }
   </script>
-<!-- OSMD - render Musicxml files (must load before docsify core, below) -->
-<script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.6/build/opensheetmusicdisplay.min.js"></script>
+  <!-- OSMD - render Musicxml files (must load before docsify core, below) -->
+  <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.6/build/opensheetmusicdisplay.min.js"></script>
   <!-- Docsify core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
   <!-- Search plugin -->
@@ -94,4 +112,5 @@
   <!-- Pagination plugin -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
 </body>
+
 </html>
