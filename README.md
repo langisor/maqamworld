@@ -29,6 +29,10 @@ This documentation provides a comprehensive introduction to Arabic music theory,
 
 Mastery and performance applications.
 
+### Appendix B - Maqamat Scores
+
+[Navigate Scores](/en/appendix/maqamt-score.md)
+
 ## 🌍 Languages
 
 - [English Guide](/en/)
