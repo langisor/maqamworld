@@ -11,18 +11,53 @@
   <style>
     .maqam-score {
       width: 100%;
-      margin: 1rem auto;
-      padding: 0.2rem;
+      max-width: 900px;
+      margin: 1.5rem auto;
+      padding: 1rem;
       box-sizing: border-box;
       border: 1px solid var(--border-color, #e0e0e0);
-      border-radius: 6px;
+      border-radius: 8px;
+      background: var(--background-color, #fff);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      overflow-x: auto;
+      overflow-y: hidden;
+      transition: box-shadow 0.3s ease;
+    }
 
+    .maqam-score:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
 
     .maqam-score:empty::before {
       content: 'Loading score…';
       color: #700808;
       font-size: 0.85em;
+      display: block;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .maqam-score svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .maqam-score {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .maqam-score {
+        margin: 0.75rem -1rem;
+        padding: 0.5rem 1rem;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+      }
     }
   </style>
 </head>
@@ -74,13 +109,12 @@
               el.setAttribute('data-rendered', 'true'); // avoid double-render on repeat visits
               var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay(el, {
                 autoResize: true,
-
                 drawTitle: true,
                 defaultColorLabel: '#0000ff',
                 defaultColorReset: '#e0382b',
-
-
-
+                drawPartNames: false,
+                drawMeasureNumbers: true,
+                backend: 'svg'
               });
               osmd.EngravingRules.DefaultFontFamily = "Georgia, 'Times New Roman', serif";
 
