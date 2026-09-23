@@ -18,10 +18,10 @@ This documentation provides a comprehensive introduction to Arabic music theory,
 
 ### Level 2: Advanced Scales (Maqamat) - Tetrachord and Pentachord
 
-- Module 1: 
-- Module 2: 
-- Module 3: 
-- Module 4: 
+- [Module 5: Other Ajnas Types — Trichords and Pentachords](#module-5-other-ajnas-types--trichords-and-pentachords)
+- [Module 6: Reading the Tradition — Arabic Note Names & Transposition](#module-6-reading-the-tradition--arabic-note-names--transposition)
+- [Module 7: Maqam Families — The Big Map](#module-7-maqam-families--the-big-map)
+- [Module 8: Survey of Common Maqamat](#module-8-survey-of-common-maqamat)
 
 [Start Level 2 →](/en/level-2.md)
 
