@@ -666,7 +666,7 @@ This structure is the practical, performance-level payoff of everything in Modul
 24. What is the quarter-tone formula for Jins Bayati (root to top)?
 
     - a) 4–3–3
-    - b) 3–4–4
+    - b) 3–3–4
     - c) 2–6–2
     - d) 4–2–4
 
