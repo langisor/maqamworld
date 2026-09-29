@@ -6,6 +6,8 @@ This documentation provides a comprehensive introduction to Arabic music theory,
 
 ## 📚 Course Structure
 
+- [Facts For This Guide](/en/maqamat-facts.md)
+
 ### Level 1: Foundation
 
 - [Module 1: The Foundations of the Arabic Sound System](#module-1-the-foundations-of-the-arabic-sound-system)
@@ -14,7 +16,6 @@ This documentation provides a comprehensive introduction to Arabic music theory,
 - [Module 4: The Art of Melodic Movement (Sayr and Modulation)](#module-4-the-art-of-melodic-movement-sayr-and-modulation)
 
 [Start Level 1 →](/en/level-1.md)
-
 
 ### Level 2: Advanced Scales (Maqamat) - Tetrachord and Pentachord
 
@@ -64,4 +65,4 @@ For audio examples and additional reference:
 
 ---
 
-*Built with [Docsify](https://docsify.js.org)*
+_Built with [Docsify](https://docsify.js.org)_
