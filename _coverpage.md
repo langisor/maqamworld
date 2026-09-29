@@ -15,7 +15,7 @@
 Learn the fundamentals of Arabic music theory with a focus on violin performance.
 
 - **Level 1**: Foundation - Quarter-tones, Ajnas, and Maqamat
-- **Level 2**: Coming Soon
+- **Level 2**: Advanced Maqamat
 - **Level 3**: Coming Soon
 
 Available in English and Arabic.
